@@ -42,7 +42,7 @@ class Register extends Component {
     } else {
       firebase
         .auth()
-        .setPersistence(firebase.auth.Auth.Persistence.NONE)
+        .setPersistence(firebase.auth.Auth.Persistence.SESSION)
         .then(() => {
           firebase
             .auth()

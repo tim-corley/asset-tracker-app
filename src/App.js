@@ -104,7 +104,7 @@ class App extends Component {
           <Aircraft
             path="/aircraft"
             aircraft={this.state.aircraft}
-            userID={this.state.userID}
+            user={this.state.user}
           />
           <Register path="/register" registerUser={this.registerUser} />
         </Router>
