@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class AircraftList extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { aircraft } = this.props;
     const myAircraft = aircraft.map(item => {

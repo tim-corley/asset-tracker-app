@@ -22,13 +22,7 @@ class Register extends Component {
     const itemName = e.target.name;
     const itemValue = e.target.value;
 
-    this.setState({ [itemName]: itemValue }, () => {
-      if (this.state.pwdOne !== this.state.pwdTwo) {
-        this.setState({ errorMessage: 'Passwords Do Not Match!' });
-      } else {
-        this.setState({ errorMessage: null });
-      }
-    });
+    this.setState({ [itemName]: itemValue });
   }
 
   handleSubmit(e) {
@@ -39,24 +33,32 @@ class Register extends Component {
       password: this.state.pwdOne
     };
     e.preventDefault();
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(
-        registrationInfo.email,
-        registrationInfo.password
-      )
-      .then(() => {
-        let fullName =
-          registrationInfo.firstName + ' ' + registrationInfo.lastName;
-        this.props.registerUser(fullName);
-      })
-      .catch(error => {
-        if (error.message !== null) {
-          this.setState({ errorMessage: error.message });
-        } else {
-          this.setState({ errorMessage: null });
-        }
+    if (this.state.pwdOne !== this.state.pwdTwo) {
+      this.setState({
+        errorMessage: 'Passwords Do Not Match!',
+        pwdOne: '',
+        pwdTwo: ''
       });
+    } else {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(
+          registrationInfo.email,
+          registrationInfo.password
+        )
+        .then(() => {
+          let fullName =
+            registrationInfo.firstName + ' ' + registrationInfo.lastName;
+          this.props.registerUser(fullName);
+        })
+        .catch(error => {
+          if (error.message !== null) {
+            this.setState({ errorMessage: error.message });
+          } else {
+            this.setState({ errorMessage: null });
+          }
+        });
+    }
   }
 
   render() {
