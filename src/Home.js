@@ -17,7 +17,7 @@ class Home extends Component {
               ASSET TRACKER
             </h2>
             <hr className="block mb-6 mt-10 w-8 border-blue-600 h-0 border-t-2" />
-            <p className="text-gray-800 mb-10">
+            <p className="font-thin text-xl mb-10">
               Welcome to the Asset Tracker! Login or Register to view the
               real-time status of your asset(s).
             </p>

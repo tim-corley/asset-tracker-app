@@ -10,7 +10,15 @@ class Aircraft extends Component {
           MY AIRCRAFT
         </h2>
         <hr className="block mb-6 mt-10 w-8 border-blue-600 h-0 border-t-2" />
-        {this.props.aircraft && <AircraftList aircraft={this.props.aircraft} />}
+        {this.props.aircraft && this.props.aircraft.length ? (
+          <AircraftList aircraft={this.props.aircraft} />
+        ) : (
+          <div className="font-thin text-xl">
+            There is currently no aircraft associated to your account. Please
+            contact an admin in order to have your account linked with your
+            aircraft.
+          </div>
+        )}
       </div>
     );
   }
