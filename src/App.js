@@ -30,16 +30,19 @@ class App extends Component {
         const sheetID = '1HhuuTzpLdvSnhXPfQDuhp0NxgKutSFOpHyB9mXAk3Ts/';
         const aircraftRef = firebase
           .database()
-          .ref(sheetID + 'aircraft/' + FBUser.uid + '/aircraft');
+          .ref(sheetID + 'aircraft/' + FBUser.uid);
         // WHEN DATA CHANGES, CAPTURE SNAPSHOT
         aircraftRef.on('value', snapshot => {
-          let aircraft = snapshot.val();
+          let aircraft = snapshot.child('aircraft').val();
           let aircraftList = [];
 
           for (let item in aircraft) {
             aircraftList.push({
-              aircraftID: item,
-              aircraftName: aircraft[item].aircraftName
+              aircraftYear: aircraft[item].year,
+              aircraftModel: aircraft[item].model,
+              aircraftRegistration: aircraft[item].registration,
+              aircraftHours: aircraft[item].hours,
+              aircraftStatus: aircraft[item].currentStatus
             });
           }
           this.setState({
