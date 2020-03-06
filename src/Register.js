@@ -42,10 +42,15 @@ class Register extends Component {
     } else {
       firebase
         .auth()
-        .createUserWithEmailAndPassword(
-          registrationInfo.email,
-          registrationInfo.password
-        )
+        .setPersistence(firebase.auth.Auth.Persistence.NONE)
+        .then(() => {
+          firebase
+            .auth()
+            .createUserWithEmailAndPassword(
+              registrationInfo.email,
+              registrationInfo.password
+            );
+        })
         .then(() => {
           let fullName =
             registrationInfo.firstName + ' ' + registrationInfo.lastName;

@@ -58,15 +58,17 @@ class App extends Component {
 
   registerUser = userName => {
     firebase.auth().onAuthStateChanged(FBUser => {
-      FBUser.updateProfile({ displayName: userName }).then(() => {
-        this.setState({
-          user: FBUser,
-          displayName: FBUser.displayName,
-          userID: FBUser.uid
+      if (FBUser != null) {
+        console.log('UPDATE PROFILE...');
+        FBUser.updateProfile({ displayName: userName }).then(() => {
+          this.setState({
+            user: FBUser,
+            displayName: FBUser.displayName,
+            userID: FBUser.uid
+          });
+          navigate('/aircraft');
         });
-        // (USING REACH ROUTER METHOD) ONCE STATE IS SET, GO TO MEETINGS
-        navigate('/aircraft');
-      });
+      }
     });
   };
 
@@ -81,7 +83,7 @@ class App extends Component {
       .auth()
       .signOut()
       .then(() => {
-        navigate('/login');
+        navigate('/');
       });
   };
 
