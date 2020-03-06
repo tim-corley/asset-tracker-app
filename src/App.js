@@ -95,7 +95,7 @@ class App extends Component {
         {this.state.user && (
           <Welcome
             userName={this.state.displayName}
-            logoutUser={this.logoutUser}
+            userID={this.state.userID}
           />
         )}
         <Router>
