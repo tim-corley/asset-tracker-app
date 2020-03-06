@@ -1,5 +1,18 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
+/* CUSTOM
+   ========================================================================== */
+
+/**
+ * Custom styles
+ * 1. Checkbox driven hamburger menu for mobile navbar
+ * https://github.com/justalever/tailwind-navbar/blob/master/public/index.html
+ */
+
+#menu-toggle:checked + #menu {
+  display: block;
+}
+
 /* Document
    ========================================================================== */
 
@@ -174,7 +187,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -184,7 +198,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -193,9 +208,9 @@ select { /* 1 */
  */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -204,9 +219,9 @@ button,
  */
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -216,9 +231,9 @@ button::-moz-focus-inner,
  */
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -267,8 +282,8 @@ textarea {
  * 2. Remove the padding in IE 10.
  */
 
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -277,8 +292,8 @@ textarea {
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -287,7 +302,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 
-[type="search"] {
+[type='search'] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -296,7 +311,7 @@ textarea {
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -414,7 +429,9 @@ ul {
  */
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -485,7 +502,7 @@ textarea::placeholder {
 }
 
 button,
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -542,7 +559,8 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
 }
 
 /**
@@ -3659,7 +3677,7 @@ video {
 }
 
 .clearfix:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -3677,15 +3695,18 @@ video {
 }
 
 .font-sans {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .font-serif {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
 .font-mono {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
 }
 
 .font-hairline {
@@ -3885,7 +3906,7 @@ video {
 }
 
 .leading-3 {
-  line-height: .75rem;
+  line-height: 0.75rem;
 }
 
 .leading-4 {
@@ -6810,15 +6831,18 @@ video {
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .shadow-xl {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .shadow-2xl {
@@ -6850,15 +6874,18 @@ video {
 }
 
 .hover\:shadow-md:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .hover\:shadow-lg:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .hover\:shadow-xl:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .hover\:shadow-2xl:hover {
@@ -6890,15 +6917,18 @@ video {
 }
 
 .focus\:shadow-md:focus {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .focus\:shadow-lg:focus {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .focus\:shadow-xl:focus {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .focus\:shadow-2xl:focus {
@@ -9167,7 +9197,10 @@ video {
   --transform-skew-y: 0;
   --transform-scale-x: 1;
   --transform-scale-y: 1;
-  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+  transform: translateX(var(--transform-translate-x))
+    translateY(var(--transform-translate-y)) rotate(var(--transform-rotate))
+    skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y))
+    scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
 }
 
 .transform-none {
@@ -9216,23 +9249,23 @@ video {
 }
 
 .scale-50 {
-  --transform-scale-x: .5;
-  --transform-scale-y: .5;
+  --transform-scale-x: 0.5;
+  --transform-scale-y: 0.5;
 }
 
 .scale-75 {
-  --transform-scale-x: .75;
-  --transform-scale-y: .75;
+  --transform-scale-x: 0.75;
+  --transform-scale-y: 0.75;
 }
 
 .scale-90 {
-  --transform-scale-x: .9;
-  --transform-scale-y: .9;
+  --transform-scale-x: 0.9;
+  --transform-scale-y: 0.9;
 }
 
 .scale-95 {
-  --transform-scale-x: .95;
-  --transform-scale-y: .95;
+  --transform-scale-x: 0.95;
+  --transform-scale-y: 0.95;
 }
 
 .scale-100 {
@@ -9265,19 +9298,19 @@ video {
 }
 
 .scale-x-50 {
-  --transform-scale-x: .5;
+  --transform-scale-x: 0.5;
 }
 
 .scale-x-75 {
-  --transform-scale-x: .75;
+  --transform-scale-x: 0.75;
 }
 
 .scale-x-90 {
-  --transform-scale-x: .9;
+  --transform-scale-x: 0.9;
 }
 
 .scale-x-95 {
-  --transform-scale-x: .95;
+  --transform-scale-x: 0.95;
 }
 
 .scale-x-100 {
@@ -9305,19 +9338,19 @@ video {
 }
 
 .scale-y-50 {
-  --transform-scale-y: .5;
+  --transform-scale-y: 0.5;
 }
 
 .scale-y-75 {
-  --transform-scale-y: .75;
+  --transform-scale-y: 0.75;
 }
 
 .scale-y-90 {
-  --transform-scale-y: .9;
+  --transform-scale-y: 0.9;
 }
 
 .scale-y-95 {
-  --transform-scale-y: .95;
+  --transform-scale-y: 0.95;
 }
 
 .scale-y-100 {
@@ -9346,23 +9379,23 @@ video {
 }
 
 .hover\:scale-50:hover {
-  --transform-scale-x: .5;
-  --transform-scale-y: .5;
+  --transform-scale-x: 0.5;
+  --transform-scale-y: 0.5;
 }
 
 .hover\:scale-75:hover {
-  --transform-scale-x: .75;
-  --transform-scale-y: .75;
+  --transform-scale-x: 0.75;
+  --transform-scale-y: 0.75;
 }
 
 .hover\:scale-90:hover {
-  --transform-scale-x: .9;
-  --transform-scale-y: .9;
+  --transform-scale-x: 0.9;
+  --transform-scale-y: 0.9;
 }
 
 .hover\:scale-95:hover {
-  --transform-scale-x: .95;
-  --transform-scale-y: .95;
+  --transform-scale-x: 0.95;
+  --transform-scale-y: 0.95;
 }
 
 .hover\:scale-100:hover {
@@ -9395,19 +9428,19 @@ video {
 }
 
 .hover\:scale-x-50:hover {
-  --transform-scale-x: .5;
+  --transform-scale-x: 0.5;
 }
 
 .hover\:scale-x-75:hover {
-  --transform-scale-x: .75;
+  --transform-scale-x: 0.75;
 }
 
 .hover\:scale-x-90:hover {
-  --transform-scale-x: .9;
+  --transform-scale-x: 0.9;
 }
 
 .hover\:scale-x-95:hover {
-  --transform-scale-x: .95;
+  --transform-scale-x: 0.95;
 }
 
 .hover\:scale-x-100:hover {
@@ -9435,19 +9468,19 @@ video {
 }
 
 .hover\:scale-y-50:hover {
-  --transform-scale-y: .5;
+  --transform-scale-y: 0.5;
 }
 
 .hover\:scale-y-75:hover {
-  --transform-scale-y: .75;
+  --transform-scale-y: 0.75;
 }
 
 .hover\:scale-y-90:hover {
-  --transform-scale-y: .9;
+  --transform-scale-y: 0.9;
 }
 
 .hover\:scale-y-95:hover {
-  --transform-scale-y: .95;
+  --transform-scale-y: 0.95;
 }
 
 .hover\:scale-y-100:hover {
@@ -9476,23 +9509,23 @@ video {
 }
 
 .focus\:scale-50:focus {
-  --transform-scale-x: .5;
-  --transform-scale-y: .5;
+  --transform-scale-x: 0.5;
+  --transform-scale-y: 0.5;
 }
 
 .focus\:scale-75:focus {
-  --transform-scale-x: .75;
-  --transform-scale-y: .75;
+  --transform-scale-x: 0.75;
+  --transform-scale-y: 0.75;
 }
 
 .focus\:scale-90:focus {
-  --transform-scale-x: .9;
-  --transform-scale-y: .9;
+  --transform-scale-x: 0.9;
+  --transform-scale-y: 0.9;
 }
 
 .focus\:scale-95:focus {
-  --transform-scale-x: .95;
-  --transform-scale-y: .95;
+  --transform-scale-x: 0.95;
+  --transform-scale-y: 0.95;
 }
 
 .focus\:scale-100:focus {
@@ -9525,19 +9558,19 @@ video {
 }
 
 .focus\:scale-x-50:focus {
-  --transform-scale-x: .5;
+  --transform-scale-x: 0.5;
 }
 
 .focus\:scale-x-75:focus {
-  --transform-scale-x: .75;
+  --transform-scale-x: 0.75;
 }
 
 .focus\:scale-x-90:focus {
-  --transform-scale-x: .9;
+  --transform-scale-x: 0.9;
 }
 
 .focus\:scale-x-95:focus {
-  --transform-scale-x: .95;
+  --transform-scale-x: 0.95;
 }
 
 .focus\:scale-x-100:focus {
@@ -9565,19 +9598,19 @@ video {
 }
 
 .focus\:scale-y-50:focus {
-  --transform-scale-y: .5;
+  --transform-scale-y: 0.5;
 }
 
 .focus\:scale-y-75:focus {
-  --transform-scale-y: .75;
+  --transform-scale-y: 0.75;
 }
 
 .focus\:scale-y-90:focus {
-  --transform-scale-y: .9;
+  --transform-scale-y: 0.9;
 }
 
 .focus\:scale-y-95:focus {
-  --transform-scale-y: .95;
+  --transform-scale-y: 0.95;
 }
 
 .focus\:scale-y-100:focus {
@@ -10845,7 +10878,8 @@ video {
 }
 
 .transition {
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
 }
 
 .transition-colors {
@@ -13966,7 +14000,7 @@ video {
   }
 
   .sm\:clearfix:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -13984,15 +14018,19 @@ video {
   }
 
   .sm\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
   }
 
   .sm\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
   }
 
   .sm\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
   }
 
   .sm\:font-hairline {
@@ -14192,7 +14230,7 @@ video {
   }
 
   .sm\:leading-3 {
-    line-height: .75rem;
+    line-height: 0.75rem;
   }
 
   .sm\:leading-4 {
@@ -17117,15 +17155,18 @@ video {
   }
 
   .sm\:shadow-md {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .sm\:shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .sm\:shadow-xl {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .sm\:shadow-2xl {
@@ -17157,15 +17198,18 @@ video {
   }
 
   .sm\:hover\:shadow-md:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .sm\:hover\:shadow-lg:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .sm\:hover\:shadow-xl:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .sm\:hover\:shadow-2xl:hover {
@@ -17197,15 +17241,18 @@ video {
   }
 
   .sm\:focus\:shadow-md:focus {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .sm\:focus\:shadow-lg:focus {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .sm\:focus\:shadow-xl:focus {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .sm\:focus\:shadow-2xl:focus {
@@ -19474,7 +19521,10 @@ video {
     --transform-skew-y: 0;
     --transform-scale-x: 1;
     --transform-scale-y: 1;
-    transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+    transform: translateX(var(--transform-translate-x))
+      translateY(var(--transform-translate-y)) rotate(var(--transform-rotate))
+      skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y))
+      scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
   }
 
   .sm\:transform-none {
@@ -19523,23 +19573,23 @@ video {
   }
 
   .sm\:scale-50 {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .sm\:scale-75 {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .sm\:scale-90 {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .sm\:scale-95 {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .sm\:scale-100 {
@@ -19572,19 +19622,19 @@ video {
   }
 
   .sm\:scale-x-50 {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .sm\:scale-x-75 {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .sm\:scale-x-90 {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .sm\:scale-x-95 {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .sm\:scale-x-100 {
@@ -19612,19 +19662,19 @@ video {
   }
 
   .sm\:scale-y-50 {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .sm\:scale-y-75 {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .sm\:scale-y-90 {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .sm\:scale-y-95 {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .sm\:scale-y-100 {
@@ -19653,23 +19703,23 @@ video {
   }
 
   .sm\:hover\:scale-50:hover {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .sm\:hover\:scale-75:hover {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .sm\:hover\:scale-90:hover {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .sm\:hover\:scale-95:hover {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .sm\:hover\:scale-100:hover {
@@ -19702,19 +19752,19 @@ video {
   }
 
   .sm\:hover\:scale-x-50:hover {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .sm\:hover\:scale-x-75:hover {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .sm\:hover\:scale-x-90:hover {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .sm\:hover\:scale-x-95:hover {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .sm\:hover\:scale-x-100:hover {
@@ -19742,19 +19792,19 @@ video {
   }
 
   .sm\:hover\:scale-y-50:hover {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .sm\:hover\:scale-y-75:hover {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .sm\:hover\:scale-y-90:hover {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .sm\:hover\:scale-y-95:hover {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .sm\:hover\:scale-y-100:hover {
@@ -19783,23 +19833,23 @@ video {
   }
 
   .sm\:focus\:scale-50:focus {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .sm\:focus\:scale-75:focus {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .sm\:focus\:scale-90:focus {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .sm\:focus\:scale-95:focus {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .sm\:focus\:scale-100:focus {
@@ -19832,19 +19882,19 @@ video {
   }
 
   .sm\:focus\:scale-x-50:focus {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .sm\:focus\:scale-x-75:focus {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .sm\:focus\:scale-x-90:focus {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .sm\:focus\:scale-x-95:focus {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .sm\:focus\:scale-x-100:focus {
@@ -19872,19 +19922,19 @@ video {
   }
 
   .sm\:focus\:scale-y-50:focus {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .sm\:focus\:scale-y-75:focus {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .sm\:focus\:scale-y-90:focus {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .sm\:focus\:scale-y-95:focus {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .sm\:focus\:scale-y-100:focus {
@@ -21152,7 +21202,8 @@ video {
   }
 
   .sm\:transition {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke,
+      opacity, box-shadow, transform;
   }
 
   .sm\:transition-colors {
@@ -24274,7 +24325,7 @@ video {
   }
 
   .md\:clearfix:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -24292,15 +24343,19 @@ video {
   }
 
   .md\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
   }
 
   .md\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
   }
 
   .md\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
   }
 
   .md\:font-hairline {
@@ -24500,7 +24555,7 @@ video {
   }
 
   .md\:leading-3 {
-    line-height: .75rem;
+    line-height: 0.75rem;
   }
 
   .md\:leading-4 {
@@ -27425,15 +27480,18 @@ video {
   }
 
   .md\:shadow-md {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .md\:shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .md\:shadow-xl {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .md\:shadow-2xl {
@@ -27465,15 +27523,18 @@ video {
   }
 
   .md\:hover\:shadow-md:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .md\:hover\:shadow-lg:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .md\:hover\:shadow-xl:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .md\:hover\:shadow-2xl:hover {
@@ -27505,15 +27566,18 @@ video {
   }
 
   .md\:focus\:shadow-md:focus {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .md\:focus\:shadow-lg:focus {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .md\:focus\:shadow-xl:focus {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .md\:focus\:shadow-2xl:focus {
@@ -29782,7 +29846,10 @@ video {
     --transform-skew-y: 0;
     --transform-scale-x: 1;
     --transform-scale-y: 1;
-    transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+    transform: translateX(var(--transform-translate-x))
+      translateY(var(--transform-translate-y)) rotate(var(--transform-rotate))
+      skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y))
+      scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
   }
 
   .md\:transform-none {
@@ -29831,23 +29898,23 @@ video {
   }
 
   .md\:scale-50 {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .md\:scale-75 {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .md\:scale-90 {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .md\:scale-95 {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .md\:scale-100 {
@@ -29880,19 +29947,19 @@ video {
   }
 
   .md\:scale-x-50 {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .md\:scale-x-75 {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .md\:scale-x-90 {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .md\:scale-x-95 {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .md\:scale-x-100 {
@@ -29920,19 +29987,19 @@ video {
   }
 
   .md\:scale-y-50 {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .md\:scale-y-75 {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .md\:scale-y-90 {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .md\:scale-y-95 {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .md\:scale-y-100 {
@@ -29961,23 +30028,23 @@ video {
   }
 
   .md\:hover\:scale-50:hover {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .md\:hover\:scale-75:hover {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .md\:hover\:scale-90:hover {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .md\:hover\:scale-95:hover {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .md\:hover\:scale-100:hover {
@@ -30010,19 +30077,19 @@ video {
   }
 
   .md\:hover\:scale-x-50:hover {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .md\:hover\:scale-x-75:hover {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .md\:hover\:scale-x-90:hover {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .md\:hover\:scale-x-95:hover {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .md\:hover\:scale-x-100:hover {
@@ -30050,19 +30117,19 @@ video {
   }
 
   .md\:hover\:scale-y-50:hover {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .md\:hover\:scale-y-75:hover {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .md\:hover\:scale-y-90:hover {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .md\:hover\:scale-y-95:hover {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .md\:hover\:scale-y-100:hover {
@@ -30091,23 +30158,23 @@ video {
   }
 
   .md\:focus\:scale-50:focus {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .md\:focus\:scale-75:focus {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .md\:focus\:scale-90:focus {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .md\:focus\:scale-95:focus {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .md\:focus\:scale-100:focus {
@@ -30140,19 +30207,19 @@ video {
   }
 
   .md\:focus\:scale-x-50:focus {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .md\:focus\:scale-x-75:focus {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .md\:focus\:scale-x-90:focus {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .md\:focus\:scale-x-95:focus {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .md\:focus\:scale-x-100:focus {
@@ -30180,19 +30247,19 @@ video {
   }
 
   .md\:focus\:scale-y-50:focus {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .md\:focus\:scale-y-75:focus {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .md\:focus\:scale-y-90:focus {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .md\:focus\:scale-y-95:focus {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .md\:focus\:scale-y-100:focus {
@@ -31460,7 +31527,8 @@ video {
   }
 
   .md\:transition {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke,
+      opacity, box-shadow, transform;
   }
 
   .md\:transition-colors {
@@ -34582,7 +34650,7 @@ video {
   }
 
   .lg\:clearfix:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -34600,15 +34668,19 @@ video {
   }
 
   .lg\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
   }
 
   .lg\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
   }
 
   .lg\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
   }
 
   .lg\:font-hairline {
@@ -34808,7 +34880,7 @@ video {
   }
 
   .lg\:leading-3 {
-    line-height: .75rem;
+    line-height: 0.75rem;
   }
 
   .lg\:leading-4 {
@@ -37733,15 +37805,18 @@ video {
   }
 
   .lg\:shadow-md {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .lg\:shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .lg\:shadow-xl {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .lg\:shadow-2xl {
@@ -37773,15 +37848,18 @@ video {
   }
 
   .lg\:hover\:shadow-md:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .lg\:hover\:shadow-lg:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .lg\:hover\:shadow-xl:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .lg\:hover\:shadow-2xl:hover {
@@ -37813,15 +37891,18 @@ video {
   }
 
   .lg\:focus\:shadow-md:focus {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .lg\:focus\:shadow-lg:focus {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .lg\:focus\:shadow-xl:focus {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .lg\:focus\:shadow-2xl:focus {
@@ -40090,7 +40171,10 @@ video {
     --transform-skew-y: 0;
     --transform-scale-x: 1;
     --transform-scale-y: 1;
-    transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+    transform: translateX(var(--transform-translate-x))
+      translateY(var(--transform-translate-y)) rotate(var(--transform-rotate))
+      skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y))
+      scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
   }
 
   .lg\:transform-none {
@@ -40139,23 +40223,23 @@ video {
   }
 
   .lg\:scale-50 {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .lg\:scale-75 {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .lg\:scale-90 {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .lg\:scale-95 {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .lg\:scale-100 {
@@ -40188,19 +40272,19 @@ video {
   }
 
   .lg\:scale-x-50 {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .lg\:scale-x-75 {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .lg\:scale-x-90 {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .lg\:scale-x-95 {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .lg\:scale-x-100 {
@@ -40228,19 +40312,19 @@ video {
   }
 
   .lg\:scale-y-50 {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .lg\:scale-y-75 {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .lg\:scale-y-90 {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .lg\:scale-y-95 {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .lg\:scale-y-100 {
@@ -40269,23 +40353,23 @@ video {
   }
 
   .lg\:hover\:scale-50:hover {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .lg\:hover\:scale-75:hover {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .lg\:hover\:scale-90:hover {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .lg\:hover\:scale-95:hover {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .lg\:hover\:scale-100:hover {
@@ -40318,19 +40402,19 @@ video {
   }
 
   .lg\:hover\:scale-x-50:hover {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .lg\:hover\:scale-x-75:hover {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .lg\:hover\:scale-x-90:hover {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .lg\:hover\:scale-x-95:hover {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .lg\:hover\:scale-x-100:hover {
@@ -40358,19 +40442,19 @@ video {
   }
 
   .lg\:hover\:scale-y-50:hover {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .lg\:hover\:scale-y-75:hover {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .lg\:hover\:scale-y-90:hover {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .lg\:hover\:scale-y-95:hover {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .lg\:hover\:scale-y-100:hover {
@@ -40399,23 +40483,23 @@ video {
   }
 
   .lg\:focus\:scale-50:focus {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .lg\:focus\:scale-75:focus {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .lg\:focus\:scale-90:focus {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .lg\:focus\:scale-95:focus {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .lg\:focus\:scale-100:focus {
@@ -40448,19 +40532,19 @@ video {
   }
 
   .lg\:focus\:scale-x-50:focus {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .lg\:focus\:scale-x-75:focus {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .lg\:focus\:scale-x-90:focus {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .lg\:focus\:scale-x-95:focus {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .lg\:focus\:scale-x-100:focus {
@@ -40488,19 +40572,19 @@ video {
   }
 
   .lg\:focus\:scale-y-50:focus {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .lg\:focus\:scale-y-75:focus {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .lg\:focus\:scale-y-90:focus {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .lg\:focus\:scale-y-95:focus {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .lg\:focus\:scale-y-100:focus {
@@ -41768,7 +41852,8 @@ video {
   }
 
   .lg\:transition {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke,
+      opacity, box-shadow, transform;
   }
 
   .lg\:transition-colors {
@@ -44890,7 +44975,7 @@ video {
   }
 
   .xl\:clearfix:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -44908,15 +44993,19 @@ video {
   }
 
   .xl\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
   }
 
   .xl\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
   }
 
   .xl\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
   }
 
   .xl\:font-hairline {
@@ -45116,7 +45205,7 @@ video {
   }
 
   .xl\:leading-3 {
-    line-height: .75rem;
+    line-height: 0.75rem;
   }
 
   .xl\:leading-4 {
@@ -48041,15 +48130,18 @@ video {
   }
 
   .xl\:shadow-md {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .xl\:shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .xl\:shadow-xl {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .xl\:shadow-2xl {
@@ -48081,15 +48173,18 @@ video {
   }
 
   .xl\:hover\:shadow-md:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .xl\:hover\:shadow-lg:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .xl\:hover\:shadow-xl:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .xl\:hover\:shadow-2xl:hover {
@@ -48121,15 +48216,18 @@ video {
   }
 
   .xl\:focus\:shadow-md:focus {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .xl\:focus\:shadow-lg:focus {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
   .xl\:focus\:shadow-xl:focus {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
   .xl\:focus\:shadow-2xl:focus {
@@ -50398,7 +50496,10 @@ video {
     --transform-skew-y: 0;
     --transform-scale-x: 1;
     --transform-scale-y: 1;
-    transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
+    transform: translateX(var(--transform-translate-x))
+      translateY(var(--transform-translate-y)) rotate(var(--transform-rotate))
+      skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y))
+      scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
   }
 
   .xl\:transform-none {
@@ -50447,23 +50548,23 @@ video {
   }
 
   .xl\:scale-50 {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .xl\:scale-75 {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .xl\:scale-90 {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .xl\:scale-95 {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .xl\:scale-100 {
@@ -50496,19 +50597,19 @@ video {
   }
 
   .xl\:scale-x-50 {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .xl\:scale-x-75 {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .xl\:scale-x-90 {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .xl\:scale-x-95 {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .xl\:scale-x-100 {
@@ -50536,19 +50637,19 @@ video {
   }
 
   .xl\:scale-y-50 {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .xl\:scale-y-75 {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .xl\:scale-y-90 {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .xl\:scale-y-95 {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .xl\:scale-y-100 {
@@ -50577,23 +50678,23 @@ video {
   }
 
   .xl\:hover\:scale-50:hover {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .xl\:hover\:scale-75:hover {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .xl\:hover\:scale-90:hover {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .xl\:hover\:scale-95:hover {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .xl\:hover\:scale-100:hover {
@@ -50626,19 +50727,19 @@ video {
   }
 
   .xl\:hover\:scale-x-50:hover {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .xl\:hover\:scale-x-75:hover {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .xl\:hover\:scale-x-90:hover {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .xl\:hover\:scale-x-95:hover {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .xl\:hover\:scale-x-100:hover {
@@ -50666,19 +50767,19 @@ video {
   }
 
   .xl\:hover\:scale-y-50:hover {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .xl\:hover\:scale-y-75:hover {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .xl\:hover\:scale-y-90:hover {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .xl\:hover\:scale-y-95:hover {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .xl\:hover\:scale-y-100:hover {
@@ -50707,23 +50808,23 @@ video {
   }
 
   .xl\:focus\:scale-50:focus {
-    --transform-scale-x: .5;
-    --transform-scale-y: .5;
+    --transform-scale-x: 0.5;
+    --transform-scale-y: 0.5;
   }
 
   .xl\:focus\:scale-75:focus {
-    --transform-scale-x: .75;
-    --transform-scale-y: .75;
+    --transform-scale-x: 0.75;
+    --transform-scale-y: 0.75;
   }
 
   .xl\:focus\:scale-90:focus {
-    --transform-scale-x: .9;
-    --transform-scale-y: .9;
+    --transform-scale-x: 0.9;
+    --transform-scale-y: 0.9;
   }
 
   .xl\:focus\:scale-95:focus {
-    --transform-scale-x: .95;
-    --transform-scale-y: .95;
+    --transform-scale-x: 0.95;
+    --transform-scale-y: 0.95;
   }
 
   .xl\:focus\:scale-100:focus {
@@ -50756,19 +50857,19 @@ video {
   }
 
   .xl\:focus\:scale-x-50:focus {
-    --transform-scale-x: .5;
+    --transform-scale-x: 0.5;
   }
 
   .xl\:focus\:scale-x-75:focus {
-    --transform-scale-x: .75;
+    --transform-scale-x: 0.75;
   }
 
   .xl\:focus\:scale-x-90:focus {
-    --transform-scale-x: .9;
+    --transform-scale-x: 0.9;
   }
 
   .xl\:focus\:scale-x-95:focus {
-    --transform-scale-x: .95;
+    --transform-scale-x: 0.95;
   }
 
   .xl\:focus\:scale-x-100:focus {
@@ -50796,19 +50897,19 @@ video {
   }
 
   .xl\:focus\:scale-y-50:focus {
-    --transform-scale-y: .5;
+    --transform-scale-y: 0.5;
   }
 
   .xl\:focus\:scale-y-75:focus {
-    --transform-scale-y: .75;
+    --transform-scale-y: 0.75;
   }
 
   .xl\:focus\:scale-y-90:focus {
-    --transform-scale-y: .9;
+    --transform-scale-y: 0.9;
   }
 
   .xl\:focus\:scale-y-95:focus {
-    --transform-scale-y: .95;
+    --transform-scale-y: 0.95;
   }
 
   .xl\:focus\:scale-y-100:focus {
@@ -52076,7 +52177,8 @@ video {
   }
 
   .xl\:transition {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke,
+      opacity, box-shadow, transform;
   }
 
   .xl\:transition-colors {
