@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Demo extends Component {
+class Home extends Component {
   render() {
     return (
       <section className="w-3/6 m-auto flex flex-wrap mt-20">
@@ -10,10 +10,10 @@ class Demo extends Component {
               01
             </span>
             <h2 className="z-10 relative text-2xl text-gray-900 absolute">
-              Tailwind Demo
+              TAILWIND CSS DEMO
             </h2>
-            <hr className="block mb-6 mt-5 w-8 border-red-500 h-0 border-t-2" />
-            <p className="text-gray-700">
+            <hr className="block mb-6 mt-5 w-8 border-red-600 h-0 border-t-2" />
+            <p className="text-gray-800">
               Ex Lorem eu voluptate eiusmod culpa aliqua exercitation irure
               minim cillum sit. Incididunt eu aliqua sint eiusmod ex Lorem
               deserunt et veniam adipisicing ea qui. Officia amet dolor sint
@@ -29,4 +29,4 @@ class Demo extends Component {
   }
 }
 
-export default Demo;
+export default Home;
