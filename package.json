@@ -11,13 +11,12 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
-    "build:style": "tailwind build src/styles/app.css -o src/styles/tailwind.css",
-    "start": "npm run build:style && react-scripts start",
-    "build": "react-scripts build",
+    "build:style": "tailwind build src/styles/tailwind.css -o src/styles/app.css",
+    "watch:style": "postcss src/styles/tailwind.css -o src/styles/app.css -w",
+    "start": "react-scripts start && npm run watch:style",
+    "build": "react-scripts build && npm run build:style",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build:css": "postcss src/styles/tailwind.css -o src/styles/app.css",
-    "watch:css": "postcss src/styles/tailwind.css -o src/styles/app.css -w"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
