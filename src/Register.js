@@ -68,8 +68,8 @@ class Register extends Component {
 
   render() {
     return (
-      <section className="m-auto flex flex-wrap mt-20">
-        <div className="w-1/2 mx-auto mb-8 p-10 bg-gray-100 relative rounded shadow">
+      <section className="m-auto flex flex-wrap mt-8 lg:mt-20">
+        <div className="w-11/12 md:w-1/2 mx-auto mb-8 p-4 md:p-10 bg-gray-100 relative rounded shadow">
           {this.state.errorMessage !== null ? (
             <ErrorMsg errorMessage={this.state.errorMessage} />
           ) : null}
@@ -139,7 +139,7 @@ class Register extends Component {
                 Password
               </label>
               <input
-                className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:placeholder-transparent focus:outline-none focus:shadow-outline"
                 id="password"
                 type="password"
                 name="pwdOne"
@@ -147,9 +147,6 @@ class Register extends Component {
                 value={this.state.pwdOne}
                 onChange={this.handleChange}
               />
-              <p className="text-red-500 text-xs italic">
-                Please input a password.
-              </p>
             </div>
             <div className="mb-8">
               <label
@@ -159,7 +156,7 @@ class Register extends Component {
                 Confirm Password
               </label>
               <input
-                className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:placeholder-transparent focus:outline-none focus:shadow-outline"
                 id="confirmpassword"
                 type="password"
                 name="pwdTwo"
@@ -167,13 +164,10 @@ class Register extends Component {
                 value={this.state.pwdTwo}
                 onChange={this.handleChange}
               />
-              <p className="text-red-500 text-xs italic">
-                Input password again to confirm.
-              </p>
             </div>
             <div className="flex items-center justify-between">
               <button
-                className="bg-blue-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-blue-600 text-white text-center block w-full md:w-auto md:inline hover:bg-transparent font-semibold hover:text-blue-600 py-2 px-4 my-4 md:mr-5 border border-transparent hover:border-blue-600 rounded"
                 type="submit"
               >
                 REGISTER
