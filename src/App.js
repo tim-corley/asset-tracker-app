@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Home from './Home';
-import NavigationNew from './NavigationNew';
+import Navigation from './Navigation';
 import Aircraft from './Aircraft';
 import Login from './Login';
 import Register from './Register';
@@ -91,7 +91,7 @@ class App extends Component {
     return (
       <>
         {/* <Navigation user={this.state.user} logoutUser={this.logoutUser} /> */}
-        <NavigationNew user={this.state.user} logoutUser={this.logoutUser} />
+        <Navigation user={this.state.user} logoutUser={this.logoutUser} />
         {/* ONLY SHOW WELCOME COMPONENT IF THERE IS A USER IN STATE*/}
         {this.state.user && (
           <Welcome
