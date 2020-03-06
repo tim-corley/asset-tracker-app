@@ -3,8 +3,7 @@
 /* CUSTOM
    ========================================================================== */
 
-/**
- * Custom styles
+/*
  * 1. Checkbox driven hamburger menu for mobile navbar
  * https://github.com/justalever/tailwind-navbar/blob/master/public/index.html
  */
@@ -12,6 +11,29 @@
 #menu-toggle:checked + #menu {
   display: block;
 }
+
+/*
+2. Responsive table
+https://tailwindcomponents.com/component/mobile-responsive-table
+*/
+
+@media (min-width: 640px) {
+  table {
+    display: inline-table !important;
+  }
+
+  thead tr:not(:first-child) {
+    display: none;
+  }
+}
+
+/* td:not(:last-child) {
+  border-bottom: 0;
+}
+
+th:not(:last-child) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+} */
 
 /* Document
    ========================================================================== */
