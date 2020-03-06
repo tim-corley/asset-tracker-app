@@ -21,7 +21,7 @@ class NavigationNew extends Component {
           </Link>
         </div>
 
-        <label for="menu-toggle" className="pointer-cursor lg:hidden block">
+        <label htmlFor="menu-toggle" className="pointer-cursor lg:hidden block">
           <svg
             className="fill-current text-white"
             xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ class NavigationNew extends Component {
               {!user && (
                 <Link
                   to="/login"
-                  className="lg:p-4 py-3 px-0 block border-b-2 border-t-2 border-transparent text-white hover:text-blue-200 hover:border-blue-200"
+                  className="lg:p-4 py-3 px-0 block border-b-2 border-t-2 border-transparent text-white hover:text-blue-200 hover:border-white"
                 >
                   Login
                 </Link>
@@ -52,7 +52,7 @@ class NavigationNew extends Component {
               {!user && (
                 <Link
                   to="/register"
-                  className="lg:p-4 py-3 px-0 block border-b-2 border-t-2 border-transparent text-white hover:text-blue-200 hover:border-blue-200"
+                  className="lg:p-4 py-3 px-0 block border-b-2 border-t-2 border-transparent text-white hover:text-blue-200 hover:border-white"
                 >
                   Register
                 </Link>
@@ -60,7 +60,7 @@ class NavigationNew extends Component {
               {user && (
                 <Link
                   to="/aircraft"
-                  className="lg:p-4 py-3 px-0 block border-b-2 border-t-2 border-transparent text-white hover:text-blue-200 hover:border-blue-200"
+                  className="lg:p-4 py-3 px-0 block border-b-2 border-t-2 border-transparent text-white hover:text-blue-200 hover:border-white"
                 >
                   My Aircraft
                 </Link>
@@ -68,7 +68,7 @@ class NavigationNew extends Component {
               {user && (
                 <Link
                   to="/"
-                  className="lg:p-4 py-3 px-0 block border-b-2 border-t-2 border-transparent text-white hover:text-blue-200 hover:border-blue-200"
+                  className="lg:p-4 py-3 px-0 block border-b-2 border-t-2 border-transparent text-white hover:text-blue-200 hover:border-white"
                   onClick={e => logoutUser(e)}
                 >
                   Logout
