@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AircraftList from './AircraftList';
 
 class Aircraft extends Component {
   render() {
@@ -9,6 +10,7 @@ class Aircraft extends Component {
           MY AIRCRAFT
         </h2>
         <hr className="block mb-6 mt-10 w-8 border-blue-600 h-0 border-t-2" />
+        {this.props.aircraft && <AircraftList aircraft={this.props.aircraft} />}
       </div>
     );
   }
