@@ -15,13 +15,9 @@ class AircraftList extends Component {
                 <tr className="bg-blue-600 flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
                   <th className="border border-blue-600 px-4 py-2">YEAR</th>
                   <th className="border border-blue-600 px-4 py-2">MODEL</th>
-                  <th className="border border-blue-600 px-4 py-2">
-                    REGISTRATION
-                  </th>
+                  <th className="border border-blue-600 px-4 py-2">REG. #</th>
                   <th className="border border-blue-600 px-4 py-2">HOURS</th>
-                  <th className="border border-blue-600 px-4 py-2">
-                    CURRENT STATUS
-                  </th>
+                  <th className="border border-blue-600 px-4 py-2">STATUS</th>
                 </tr>
               </thead>
               <tbody className="flex-1 sm:flex-none">
