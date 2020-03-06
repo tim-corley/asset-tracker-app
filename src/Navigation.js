@@ -50,10 +50,10 @@ class Navigation extends Component {
             )}
             {user && (
               <Link
-                to="/assets"
+                to="/aircraft"
                 className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-blue-900 mr-4"
               >
-                Assets
+                My Aircraft
               </Link>
             )}
           </div>

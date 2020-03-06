@@ -27,7 +27,10 @@ class App extends Component {
           displayName: FBUser.displayName,
           userID: FBUser.uid
         });
-        const aircraftRef = firebase.database().ref('aircraft/' + FBUser.uid);
+        const sheetID = '1HhuuTzpLdvSnhXPfQDuhp0NxgKutSFOpHyB9mXAk3Ts/';
+        const aircraftRef = firebase
+          .database()
+          .ref(sheetID + 'aircraft/' + FBUser.uid + '/aircraft');
         // WHEN DATA CHANGES, CAPTURE SNAPSHOT
         aircraftRef.on('value', snapshot => {
           let aircraft = snapshot.val();

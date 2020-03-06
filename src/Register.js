@@ -46,7 +46,9 @@ class Register extends Component {
         registrationInfo.password
       )
       .then(() => {
-        this.props.registerUser(registrationInfo.firstName);
+        let fullName =
+          registrationInfo.firstName + ' ' + registrationInfo.lastName;
+        this.props.registerUser(fullName);
       })
       .catch(error => {
         if (error.message !== null) {
@@ -77,7 +79,7 @@ class Register extends Component {
               </label>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="firstname"
+                id="firstName"
                 type="text"
                 placeholder="First Name"
                 name="firstName"
@@ -95,7 +97,7 @@ class Register extends Component {
               </label>
               <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="lastname"
+                id="lastName"
                 type="text"
                 placeholder="Last Name"
                 name="lastName"
