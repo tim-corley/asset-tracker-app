@@ -1,68 +1,80 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ASSET TRACKER
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+For development, you will only need **Node.js** installed on your environement.
 
-### `yarn start`
+### Node
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Node](http://nodejs.org/) is really easy to install & now includes [NPM](https://npmjs.org/).
+You should be able to run the following command after the installation procedure
+below.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+    $ node --version
+    v12.6.0
 
-### `yarn test`
+    $ npm --version
+    6.13.7
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Node Installation on OS X
 
-### `yarn build`
+You will need to use a Terminal. On OS X, you can find the default terminal in
+`/Applications/Utilities/Terminal.app`.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Please install [Homebrew](http://brew.sh/) if it's not already done with the following command.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once installed, run
 
-### `yarn eject`
+    brew install node
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Node installation on Windows
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Just go on [official Node.js website](http://nodejs.org/) & grab the installer.
+Also, be sure to have `git` available in your PATH, `npm` might need it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Install
 
-## Learn More
+    $ git clone https://github.com/tim-corley/asset-tracker-app.git
+    $ cd asset-tracker-app
+    $ npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Start & watch
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    $ npm run start
 
-### Code Splitting
+## Simple build for production
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+    $ npm run build
 
-### Analyzing the Bundle Size
+## Update sources
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Some packages usages might change so you should run `npm prune` & `npm install` often.
+A common way to update is by doing
 
-### Making a Progressive Web App
+    $ git pull
+    $ npm prune
+    $ npm install
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+To run those 3 commands you can just do
 
-### Advanced Configuration
+    $ npm run pull
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+---
 
-### Deployment
+## Languages & tools
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### JavaScript
 
-### `yarn build` fails to minify
+- [React](https://reactjs.org/) is used for UI.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### CSS
+
+- [TailwindCSS](https://tailwindcss.com/) is used styling.
+
+### Backend
+
+- [Firebase](https://firebase.google.com/) is used for the database (Real-Time Databse) and for hosting.
